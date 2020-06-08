@@ -8,3 +8,7 @@ function myLanguages(results) {
   }
   return aSort.filter(value => -1 !== arr.indexOf(value))
 }
+
+function capital(capitals){
+    return capitals.map(obj => `The capital of ${obj['state']||obj['country']} is ${obj['capital']}`)
+}
