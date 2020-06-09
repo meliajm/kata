@@ -23,3 +23,20 @@ function completeSeries(arr) {
   }
   return [...Array(Math.max(...arr)+1).keys()]
 }
+
+function change(string){
+  alpha = 'abcdefghijklmnopqrstuvwxyz'
+  resultArr = []
+  string = string.toLowerCase()
+  alpha = alpha.split('')
+    
+  alpha.map( (letter, i) => {
+    if (string.includes(letter)) {
+      resultArr.push(1)
+    } else {
+      resultArr.push(0)
+    }
+  })
+  console.log(resultArr)
+  return resultArr.join('')
+}
