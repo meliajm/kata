@@ -48,3 +48,17 @@ function getMinMax(arr){
   result.push(min, max)
   return result
 };
+
+function sumEvenNumbers(input) {
+  // start running sum as tot or total  
+  let tot = 0
+  // iterate over input
+  for (let i=0; i<input.length; i++) {
+  // check if each number in input is even       
+    if (input[i]%2===0) {
+      // add that number to total
+      tot += input[i]
+    }
+  }
+  return tot
+}
