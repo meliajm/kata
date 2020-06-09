@@ -12,3 +12,14 @@ function myLanguages(results) {
 function capital(capitals){
     return capitals.map(obj => `The capital of ${obj['state']||obj['country']} is ${obj['capital']}`)
 }
+
+function completeSeries(arr) {
+  // let result = []
+  arr = arr.sort()
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i]===arr[i+1]) {
+      return [0]
+    }
+  }
+  return [...Array(Math.max(...arr)+1).keys()]
+}
