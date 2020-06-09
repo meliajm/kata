@@ -1,9 +1,7 @@
-ali187, tute, ooflorent, makmonty, dragonhai, dilidili (plus 13 more warriors)
 function pigIt(str){
   //Code here
   return str.replace(/\b(\w)(\w*)\b/g,"$2$1ay");
 }
-18 similar code variations are grouped with this oneShow Variations
 
 function pigIt(str){
 
@@ -35,3 +33,13 @@ function pigIt(str){
     })
   }
   return pig.join(' ')
+}
+
+function josephus(items, k){
+    let result = [], index = 0;
+    while (items.length > 0){
+      index = (index + k - 1) % items.length;
+      result = result.concat(items.splice(index, 1));
+    }
+    return result;
+}
