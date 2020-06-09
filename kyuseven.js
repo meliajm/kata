@@ -40,3 +40,11 @@ function change(string){
   console.log(resultArr)
   return resultArr.join('')
 }
+
+function getMinMax(arr){
+  const min = Math.min(...arr)
+  const max = Math.max(...arr)
+  let result = []
+  result.push(min, max)
+  return result
+};
