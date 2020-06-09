@@ -43,3 +43,34 @@ function josephus(items, k){
     }
     return result;
 }
+
+function duplicateCount(text){
+    let array = []
+    let resArr = [1]
+    let result = []
+    text = text.toLowerCase()
+    for (let i=0; i<text.length; i++) {
+       array.push(text.split('').filter(t => t===text[i]))
+    }
+    array = array.filter(arr=>arr.length>1)
+    array.forEach( arr => {
+      if (!resArr.includes(arr)) {
+        resArr.push(arr)
+      }
+    })
+    resArr = resArr.sort()  
+    
+    for (let i=0; i<resArr.length-1; i++) {
+      if (resArr[i][0]!==resArr[i+1][0]) {
+        result.push(resArr[i])
+      }
+      
+    }
+  
+    if (result.length===0){
+      return 0
+    } else {
+      return result.length
+    }
+  
+  }
