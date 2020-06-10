@@ -116,3 +116,13 @@ function digital_root(n) {
         
     return digital_root(sum);
 }
+
+function narcissistic(value) {
+    const power = value.toString().length
+    let numArr = value.toString().split('').map(s=>parseInt(s))
+    let result = []
+    for (let i=0; i<numArr.length; i++) {
+      result.push(numArr[i]**power)
+    }
+    return (result.reduce((acc, d)=>{return acc+d})===value)
+  }
