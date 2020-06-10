@@ -74,3 +74,35 @@ function duplicateCount(text){
     }
   
   }
+
+var encryptThis = function(text) {
+    const lastLetter = text[text.length-1]
+    const secondLetter = text[1]
+    const mid = text.slice(2, text.length-1)
+    const result = []
+    text = text.split(' ')
+    for (let i=0; i<text.length; i++) {
+      let lastLetter = text[i][text[i].length-1]
+      let secondLetter = text[i][1]
+      let mid = text[i].slice(2, text[i].length-1)
+      if (text[i].length===1) {
+        result.push(text[i].charCodeAt(0))
+      }
+      else if (text[i].length===2) {
+        result.push(text[i].charCodeAt(0)+lastLetter)
+      }
+      else {
+        result.push(text[i].charCodeAt(0)+lastLetter+mid+secondLetter)
+      }
+    }
+    return result.join(' ')
+}
+
+// const splitAndAdd = (arr, n) => {
+//     if (n <= 0)
+//       return arr;
+//     const ln = arr.length;
+//     if ((ln % 2) === 1)
+//       arr.unshift(0);
+//     return splitAndAdd(arr.splice(0, Math.ceil(ln / 2)).map((a, i) => a + arr[i]), n-1);
+//     }
