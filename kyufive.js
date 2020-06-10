@@ -106,3 +106,13 @@ const splitAndAdd = (arr, n) => {
       arr.unshift(0);
     return splitAndAdd(arr.splice(0, Math.ceil(ln / 2)).map((a, i) => a + arr[i]), n-1);
     }
+
+function digital_root(n) {
+    if (n < 10)
+        return n;
+    
+    for (var sum = 0, i = 0, n = String(n); i < n.length; i++)
+        sum += Number(n[i]);
+        
+    return digital_root(sum);
+}
