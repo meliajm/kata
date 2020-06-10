@@ -133,3 +133,129 @@ function narcissistic(value) {
     let result = numArr.map( num =>  num**power)
     return (result.reduce((acc, d)=>{return acc+d})===value)
 }
+
+// function solution(string) {
+//     let indx = []
+//     const lowerString = string.toLowerCase()
+    
+//     for (let i=0; i<string.length; i++) {
+//       if (lowerString[i]!==string[i]) {
+//         indx.push(i)
+//       }
+//     }  
+    
+//     let res = [string.slice(0, indx[0])]
+    
+//     for (let j=0; j<indx.length; j++) {
+//       res.push(string.slice(indx[j], indx[j+1]))
+//     }
+    
+//     return res.join(' ')
+//   }
+
+// function generateHashtag (str) {
+//     if (str.length===0) {
+//       return false
+//     }
+//     str = str.split(' ').filter( strg=> strg!=="") 
+//     if (str[0]===undefined) {
+//       return false
+//     }
+//     if (str.map( word=>word[0].toUpperCase()+word.slice(1)).join('').length+1>140) {
+//       return false
+//     } else {
+//       return '#' + str.map( word=>word[0].toUpperCase()+word.slice(1)).join('')
+//     }
+//   }
+
+function firstNonRepeatingLetter(s) {
+    console.log(s)
+    const sLower = s.toLowerCase()
+    let result = ""
+    let invRes = []
+    for (let i=0; i<sLower.length; i++) {
+      if ((sLower.slice(i,i) + sLower.slice(i+1)).includes(sLower[i])) {
+        invRes.push(s[i])
+      }
+    }
+    console.log(invRes)
+  
+    
+    for (let i=0; i<sLower.length; i++) {
+      if (!invRes.includes(sLower[i])) {
+        result = s[i]
+        break
+      }
+    }
+  
+    console.log(result)
+    return result
+    
+  }
+
+  function formatDuration (seconds) {
+    if (seconds===0) {
+      return 'now'
+    }
+    
+    let m = 0 
+    let h = 0
+    let d = 0
+    let y = 0
+    let results = []
+    
+    console.log(seconds)
+    
+    if (seconds>=31536000) {
+      y += Math.floor(seconds/(31536000))
+      seconds = seconds%(31536000)
+    }
+    if (seconds>=3600*24) {
+      d += Math.floor(seconds/(3600*24))
+      seconds = seconds%(3600*24)
+    }
+    if (seconds>=3600) {
+      h += Math.floor(seconds/3600)
+      seconds = seconds%3600 
+    }
+    if (seconds>=60) {
+      m += Math.floor(seconds/60)
+      seconds = seconds%60 
+    }
+  //   console.log('y', y)
+  //   console.log('d', d)
+  //   console.log('h', h)
+  //   console.log('m', m)
+  //   console.log(seconds)
+//     if (y !== 0) {
+//       y === 1 ? results.push(`${y}` + ' year') : results.push(`${y}` + ' years')
+//     }
+    
+//     if (d !== 0) {
+//       d === 1 ? results.push(`${d}` + ' day') : results.push(`${d}` + ' days')
+//     }
+    
+//     if (h !== 0) {
+//       h === 1 ? results.push(`${h}` + ' hour') : results.push(`${h}` + ' hours')
+//     }
+    
+//     if (m !== 0) {
+//       m === 1 ? results.push(`${m}` + ' minute') : results.push(`${m}` + ' minutes')
+//     }
+    
+//     if (seconds !== 0) {
+//       seconds === 1 ? results.push(`${seconds}` + ' second') : results.push(`${seconds}` + ' seconds')
+//     }
+    
+//     console.log(results)
+    
+//   //  oxford comma versus not
+//     if (results.length===1) {
+//       return results.join('')
+//     }
+    
+//     if (results.length===2) {
+//       return results.join(' and ')
+//     }
+//   }
+  
