@@ -125,4 +125,11 @@ function narcissistic(value) {
       result.push(numArr[i]**power)
     }
     return (result.reduce((acc, d)=>{return acc+d})===value)
-  }
+}
+//alt
+function narcissistic(value) {
+    const power = value.toString().length
+    let numArr = value.toString().split('').map(s=>parseInt(s))
+    let result = numArr.map( num =>  num**power)
+    return (result.reduce((acc, d)=>{return acc+d})===value)
+}
