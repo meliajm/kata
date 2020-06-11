@@ -258,4 +258,31 @@ function firstNonRepeatingLetter(s) {
       return results.join(' and ')
     }
   }
+
+  function solution(input, markers) {
+    const inputSplit = input.split('\n')
+  //   console.log(input)
+  //   console.log(inputSplit)
+    let removed = []
+    for (let i=0; i<inputSplit.length; i++) {
+        if (!inputSplit[i].includes(markers[0]) && !inputSplit[i].includes(markers[1])) {
+          removed.push(inputSplit[i].trim())
+        }
+      for (let j=0; j<inputSplit[i].length; j++) {
+        if (inputSplit[i][j]===markers[0]) {
+          console.log(inputSplit[i][j])
+          console.log(i, j)
+          removed.push(inputSplit[i].slice(0, j).trim())
+        }
+        if (inputSplit[i][j]===markers[1]) {
+          console.log(inputSplit[i][j])
+          console.log(i, j)  
+          removed.push(inputSplit[i].slice(0, j).trim())
+        }
+      }
+    }
+    console.log(removed.join('\n'))
+    return removed.join('\n')
+  };
+g  
   
