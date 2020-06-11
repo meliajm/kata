@@ -134,39 +134,39 @@ function narcissistic(value) {
     return (result.reduce((acc, d)=>{return acc+d})===value)
 }
 
-// function solution(string) {
-//     let indx = []
-//     const lowerString = string.toLowerCase()
+function solution(string) {
+    let indx = []
+    const lowerString = string.toLowerCase()
     
-//     for (let i=0; i<string.length; i++) {
-//       if (lowerString[i]!==string[i]) {
-//         indx.push(i)
-//       }
-//     }  
+    for (let i=0; i<string.length; i++) {
+      if (lowerString[i]!==string[i]) {
+        indx.push(i)
+      }
+    }  
     
-//     let res = [string.slice(0, indx[0])]
+    let res = [string.slice(0, indx[0])]
     
-//     for (let j=0; j<indx.length; j++) {
-//       res.push(string.slice(indx[j], indx[j+1]))
-//     }
+    for (let j=0; j<indx.length; j++) {
+      res.push(string.slice(indx[j], indx[j+1]))
+    }
     
-//     return res.join(' ')
-//   }
+    return res.join(' ')
+  }
 
-// function generateHashtag (str) {
-//     if (str.length===0) {
-//       return false
-//     }
-//     str = str.split(' ').filter( strg=> strg!=="") 
-//     if (str[0]===undefined) {
-//       return false
-//     }
-//     if (str.map( word=>word[0].toUpperCase()+word.slice(1)).join('').length+1>140) {
-//       return false
-//     } else {
-//       return '#' + str.map( word=>word[0].toUpperCase()+word.slice(1)).join('')
-//     }
-//   }
+function generateHashtag (str) {
+    if (str.length===0) {
+      return false
+    }
+    str = str.split(' ').filter( strg=> strg!=="") 
+    if (str[0]===undefined) {
+      return false
+    }
+    if (str.map( word=>word[0].toUpperCase()+word.slice(1)).join('').length+1>140) {
+      return false
+    } else {
+      return '#' + str.map( word=>word[0].toUpperCase()+word.slice(1)).join('')
+    }
+  }
 
 function firstNonRepeatingLetter(s) {
     console.log(s)
