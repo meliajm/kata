@@ -222,40 +222,40 @@ function firstNonRepeatingLetter(s) {
       m += Math.floor(seconds/60)
       seconds = seconds%60 
     }
-  //   console.log('y', y)
-  //   console.log('d', d)
-  //   console.log('h', h)
-  //   console.log('m', m)
-  //   console.log(seconds)
-//     if (y !== 0) {
-//       y === 1 ? results.push(`${y}` + ' year') : results.push(`${y}` + ' years')
-//     }
+    console.log('y', y)
+    console.log('d', d)
+    console.log('h', h)
+    console.log('m', m)
+    console.log(seconds)
+    if (y !== 0) {
+      y === 1 ? results.push(`${y}` + ' year') : results.push(`${y}` + ' years')
+    }
     
-//     if (d !== 0) {
-//       d === 1 ? results.push(`${d}` + ' day') : results.push(`${d}` + ' days')
-//     }
+    if (d !== 0) {
+      d === 1 ? results.push(`${d}` + ' day') : results.push(`${d}` + ' days')
+    }
     
-//     if (h !== 0) {
-//       h === 1 ? results.push(`${h}` + ' hour') : results.push(`${h}` + ' hours')
-//     }
+    if (h !== 0) {
+      h === 1 ? results.push(`${h}` + ' hour') : results.push(`${h}` + ' hours')
+    }
     
-//     if (m !== 0) {
-//       m === 1 ? results.push(`${m}` + ' minute') : results.push(`${m}` + ' minutes')
-//     }
+    if (m !== 0) {
+      m === 1 ? results.push(`${m}` + ' minute') : results.push(`${m}` + ' minutes')
+    }
     
-//     if (seconds !== 0) {
-//       seconds === 1 ? results.push(`${seconds}` + ' second') : results.push(`${seconds}` + ' seconds')
-//     }
+    if (seconds !== 0) {
+      seconds === 1 ? results.push(`${seconds}` + ' second') : results.push(`${seconds}` + ' seconds')
+    }
     
-//     console.log(results)
+    console.log(results)
     
-//   //  oxford comma versus not
-//     if (results.length===1) {
-//       return results.join('')
-//     }
+  //  oxford comma versus not
+    if (results.length===1) {
+      return results.join('')
+    }
     
-//     if (results.length===2) {
-//       return results.join(' and ')
-//     }
-//   }
+    if (results.length===2) {
+      return results.join(' and ')
+    }
+  }
   
