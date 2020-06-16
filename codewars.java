@@ -9,3 +9,9 @@ public class Number {
       }
   }
 }
+
+// convert int to string
+public class ToString {
+  public static final String a =Integer.toString(123);
+
+}
