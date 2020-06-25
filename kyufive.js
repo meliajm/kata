@@ -284,5 +284,19 @@ function firstNonRepeatingLetter(s) {
     console.log(removed.join('\n'))
     return removed.join('\n')
   };
-g  
+// Your new function as given to you by me, your boss.
+var cutLog = function(p, n) {
+  // Some array to store calculated values
+  let tot = 0
+  for (j = 0; j <= n; j++) {
+      for (i = n; i >= 0; i--) { // Two nested loops = Θ(n^2)
+          if ( p[j]+p[i]> tot && j+i<=n) {
+            tot = p[j]+p[i]
+            
+          }
+      }
+  }
+  return tot; 
+}
+
   
